@@ -35,7 +35,14 @@ public class Car extends Transport {
     @Override
     public void getType() {
         if (getBodyType() == null) System.out.println("Корпус авто неизвестен");
-        else System.out.println("корпус авто - "+getBodyType().getName());
+        else System.out.println("корпус авто - " + getBodyType().getName());
+    }
+
+    @Override
+    public void diagnostic() {
+        int i = (int) (Math.random()*10);
+        if (i<=5) throw new RuntimeException("Диагностика не пройдена!");
+        System.out.println("Машина прошла диагностику!");
     }
 
     private enum BodyType {
@@ -67,6 +74,7 @@ public class Car extends Transport {
             }
             return null;
         }
+
 
     }
 }

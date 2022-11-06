@@ -64,4 +64,5 @@ public abstract class Transport implements Competetable{
         return getBrand() + " " + getModel();
     }
     public abstract void getType();
+    public abstract void diagnostic();
 }
