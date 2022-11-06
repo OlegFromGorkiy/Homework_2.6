@@ -42,6 +42,12 @@ public class Truck extends Transport {
         if (getMassCategory() == null) System.out.println("Класс грузоподъемности неизвестен");
         else System.out.println("Класс грузоподъемности "+getMassCategory().name());
     }
+    @Override
+    public void diagnostic() {
+        int i = (int) (Math.random()*10);
+        if (i<=5) throw new RuntimeException("Диагностика не пройдена!");
+        System.out.println("Машина прошла диагностику!");
+    }
 
     private enum MassCategory {
         N1(3500),

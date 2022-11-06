@@ -37,6 +37,10 @@ public class Bus extends Transport {
         if (getBusCapacity() == null) System.out.println("Класс автобуса неизвестен");
         else System.out.println("Класс автобуса - " + getBusCapacity().name());
     }
+    @Override
+    public void diagnostic() {
+        System.out.println("Автобусам диагностика не требуется!");
+    }
 
     private enum BusCapacity {
         EXTRA_SMALL(10),
